@@ -4,3 +4,16 @@
 .nav-link {
   color: #fecc01;
 }
+
+.navbar-toggler {
+  border-color: #4086d0;
+}
+
+.custom-burger {
+  font-size: 1.5rem;
+  color: #4086d0;
+}
+
+.navbar.border-bottom {
+  border-bottom: 1px solid #4086d0 !important;
+}
