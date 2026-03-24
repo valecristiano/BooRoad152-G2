@@ -86,7 +86,7 @@ export default function TripMembersPage() {
           ))
         ) : (
           <li className="list-group-item text-muted fst-italic">
-            "{searchBar}" non è presente nella lista!
+            "{searchBar}" non è nella lista!
           </li>
         )}
       </ul>

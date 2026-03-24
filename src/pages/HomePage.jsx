@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="container">
       <div className="d-flex justify-content-center my-3">
-        <h2 className="text-center bg-light border border-black rounded-3 py-2 px-3">
+        <h2 className="text-center rounded-4 py-2 px-3 title text-white fw-bolder">
           Seleziona il Viaggio
         </h2>
       </div>
@@ -27,7 +27,9 @@ export default function HomePage() {
                 <div className="card-img-overlay overlay-dark d-flex align-items-center justify-content-between">
                   {/* trip destination */}
                   <div className="d-flex">
-                    <h2 className="card-title fw-bolder fst-italic">{trip.destination}</h2>
+                    <h2 className="card-title fw-bolder fst-italic">
+                      {trip.destination}
+                    </h2>
                   </div>
                   <div>
                     {/* trip dates */}
