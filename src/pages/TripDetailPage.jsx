@@ -33,7 +33,7 @@ export default function TripMembersPage() {
             className="card p-3 w-100 d-flex flex-column justify-content-around"
             id="trip-info"
           >
-            <h2 className="h1 mb-1 fw-bolder">
+            <h2 className="h1 mb-1 fw-bolder mb-2">
               <em> {trip.destination}</em>
             </h2>
             <div className="fs-5 mb-1">
