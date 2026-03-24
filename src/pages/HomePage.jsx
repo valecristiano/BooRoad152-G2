@@ -7,7 +7,7 @@ export default function HomePage() {
   const [trips, setTrips] = useState(initialTrips);
 
   return (
-    <div className="container">
+    <div className="container pt-1 pb-5">
       {/* trips */}
       <div className="d-flex justify-content-center my-3">
         <h2 className="text-center rounded-4 py-2 px-3 title text-white fw-bolder">
@@ -53,7 +53,6 @@ export default function HomePage() {
           id="exampleModalToggle"
           aria-hidden="true"
           aria-labelledby="exampleModalToggleLabel"
-          tabIndex="-1"
         >
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content form-add">
@@ -78,10 +77,6 @@ export default function HomePage() {
           </button>
         </div>
       </div>
-      {/* new trip form */}
-      {/* <section className="new-trip-section mt-5">
-        <NewTripForm trips={trips} setTrips={setTrips} />
-      </section> */}
     </div>
   );
 }

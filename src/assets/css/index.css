@@ -1,6 +1,7 @@
 .navbar-brand {
   color: #4086d0;
 }
+
 .nav-link {
   color: #fecc01;
 }
@@ -57,7 +58,7 @@
 }
 
 main {
-  background-image: url("../../../public/img/sydney.jpg");
+  background-image: url("/img/sydney.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

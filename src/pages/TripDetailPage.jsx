@@ -3,8 +3,8 @@ import { useState } from "react";
 import trips from "../data/trips";
 import members from "../data/members";
 import SearchBar from "../components/SearchBar";
-import "../assets/css/members-detail.css";
 import MemberCard from "../components/MemberCard";
+import "../assets/css/members-detail.css";
 
 export default function TripMembersPage() {
   const { id } = useParams();
@@ -21,14 +21,14 @@ export default function TripMembersPage() {
 
   if (!trip) {
     return (
-      <div className="container mt-4">
+      <div className="container py-5">
         <h2>Viaggio non trovato</h2>
       </div>
     );
   }
 
   return (
-    <div className="container">
+    <div className="container py-4">
       <div className="row g-4">
         <section className="col-12 col-sm-4 d-flex align-items-center">
           <div className="card p-3 w-100 d-flex flex-column justify-content-around" id="trip-info">

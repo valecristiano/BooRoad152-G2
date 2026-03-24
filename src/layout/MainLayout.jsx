@@ -19,9 +19,7 @@ export default function MainLayout() {
       </header>
       {/* main */}
       <main>
-        <div className="py-3">
-          <Outlet />
-        </div>
+        <Outlet />
       </main>
     </>
   );
