@@ -6,16 +6,14 @@ import MainLayout from "./layout/MainLayout";
 
 export default function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route Component={MainLayout}>
-            <Route index Component={HomePage}></Route>
-            <Route path="/:id" Component={TripDetailPage}></Route>
-            <Route path="/member/:id" Component={MemberDetailPage}></Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route Component={MainLayout}>
+          <Route index Component={HomePage}></Route>
+          <Route path="/:id" Component={TripDetailPage}></Route>
+          <Route path="/member/:id" Component={MemberDetailPage}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
