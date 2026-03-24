@@ -30,14 +30,9 @@ export default function TripMembersPage() {
   return (
     <div className="container">
       <div className="row g-4">
-        <section className="col-4 d-flex align-items-center">
-          <div
-            className="card p-3 w-100 d-flex flex-column justify-content-around"
-            id="trip-info"
-          >
-            <h2 className="h1 mb-1 fw-bolder mb-2 fst-italic">
-              {trip.destination}
-            </h2>
+        <section className="col-12 col-sm-4 d-flex align-items-center">
+          <div className="card p-3 w-100 d-flex flex-column justify-content-around" id="trip-info">
+            <h2 className="h1 mb-1 fw-bolder mb-2 fst-italic">{trip.destination}</h2>
             <div className="fs-5 mb-1 fst-italic">
               <span className="fw-semibold">Starting: </span>
               <span>{`${trip.start_date}`}</span>
@@ -49,14 +44,9 @@ export default function TripMembersPage() {
           </div>
         </section>
 
-        <div className="col-8">
+        <div className="col-12 col-sm-8">
           <div className="poster-container">
-            <img
-              className="img-fluid"
-              src={trip.image}
-              alt={trip.destination}
-              id="trip-img"
-            />
+            <img className="img-fluid" src={trip.image} alt={trip.destination} id="trip-img" />
           </div>
         </div>
       </div>
@@ -102,9 +92,7 @@ export default function TripMembersPage() {
         )}
       </ul>
 
-     <MemberCard
-  selectedMember={selectedMember}
-  onClose={() => setSelectedMember(null)}/>
+      <MemberCard selectedMember={selectedMember} onClose={() => setSelectedMember(null)} />
     </div>
   );
 }

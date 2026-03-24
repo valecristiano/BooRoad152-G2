@@ -14,7 +14,7 @@ export default function HomePage() {
           id="exampleModalToggle"
           aria-hidden="true"
           aria-labelledby="exampleModalToggleLabel"
-          tabindex="-1"
+          tabIndex="-1"
         >
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content form-add">
@@ -32,7 +32,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           className="modal fade"
           id="exampleModalToggle2"
           aria-hidden="true"
@@ -66,7 +66,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <button
           className="btn btn-primary"
           data-bs-target="#exampleModalToggle"
@@ -75,6 +75,7 @@ export default function HomePage() {
           Aggiungi Viaggio
         </button>
       </div>
+      {/* trips */}
       <div className="d-flex justify-content-center my-3">
         <h2 className="text-center rounded-4 py-2 px-3 title text-white fw-bolder">
           Seleziona il Viaggio
@@ -94,9 +95,7 @@ export default function HomePage() {
                 <div className="card-img-overlay overlay-dark d-flex align-items-center justify-content-between">
                   {/* trip destination */}
                   <div className="d-flex">
-                    <h2 className="card-title fw-bolder fst-italic">
-                      {trip.destination}
-                    </h2>
+                    <h2 className="h1 card-title fw-bolder fst-italic">{trip.destination}</h2>
                   </div>
                   <div>
                     {/* trip dates */}
@@ -116,7 +115,6 @@ export default function HomePage() {
         ))}
       </div>
       {/* new trip form */}
-
       {/* <section className="new-trip-section mt-5">
         <NewTripForm trips={trips} setTrips={setTrips} />
       </section> */}
