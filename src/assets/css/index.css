@@ -88,6 +88,13 @@ main {
   border-radius: 12px;
 }
 
+#layover-info .member-info-box {
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: none;
+}
+
 #customer-list-item:hover {
   background: rgba(108, 108, 108, 0.25);
 }
