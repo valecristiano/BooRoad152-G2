@@ -27,6 +27,11 @@
   transition: 0.4s all ease;
 }
 
+.trip-card > img {
+  height: 300px;
+  object-position: center;
+}
+
 .trip-card:hover {
   transform: scale(1.02);
   box-shadow: 8px 10px rgb(0, 0, 0, 0.1);
