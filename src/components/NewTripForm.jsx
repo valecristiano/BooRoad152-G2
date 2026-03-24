@@ -43,7 +43,7 @@ export default function NewTripForm({ trips, setTrips }) {
       <div className="card_header rounded-top-3 text-white p-3">
         <h2 className="mb-1">Aggiungi un Nuovo Viaggio</h2>
       </div>
-      <div className="p-3 form-body">
+      <div className="px-3 pt-2 pb-3 form-body">
         {/* destination */}
         <label className="form-label fs-4 ms-1 mb-0" htmlFor="new-destination">
           Nuova Destinazione
