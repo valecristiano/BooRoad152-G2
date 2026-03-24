@@ -5,6 +5,9 @@ export default function HomePage() {
   return (
     <>
       <div className="container">
+        <h1 className="my-4 h3 text-center text-white">
+          Scegli la tua prossima meta
+        </h1>
         <div className="row row-cols-1 gap-4">
           {trips.map((trip) => {
             return (
