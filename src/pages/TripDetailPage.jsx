@@ -28,48 +28,36 @@ export default function TripMembersPage() {
   return (
     <div className="container">
       <div className="row g-4">
+        {/* trip main infos */}
         <section className="col-4 d-flex align-items-center">
-          <div
-            className="card p-3 w-100 d-flex flex-column justify-content-around"
-            id="trip-info"
-          >
-            <h2 className="h1 mb-1 fw-bolder mb-2">
-              <em> {trip.destination}</em>
-            </h2>
-            <div className="fs-5 mb-1">
-              <em>
-                <span className="fw-semibold">Starting: </span>
-                {`${trip.start_date}`}
-              </em>
+          <div className="card p-3 w-100 d-flex flex-column justify-content-around" id="trip-info">
+            <h2 className="h1 mb-1 fw-bolder mb-2 fst-italic">{trip.destination}</h2>
+            <div className="fs-5 mb-1 fst-italic">
+              <span className="fw-semibold">Starting: </span>
+              <span>{`${trip.start_date}`}</span>
             </div>
-            <div className="fs-5 mb-1">
-              <em>
-                <span className="fw-semibold">Ending: </span>
-                {`${trip.end_date}`}
-              </em>
+            <div className="fs-5 mb-1 fst-italic">
+              <span className="fw-semibold">Ending: </span>
+              <span>{`${trip.end_date}`}</span>
             </div>
           </div>
         </section>
-
+        {/* poster */}
         <div className="col-8">
           <div className="poster-container">
-            <img
-              className="img-fluid"
-              src={trip.image}
-              alt={trip.destination}
-              id="trip-img"
-            />
+            <img className="img-fluid" src={trip.image} alt={trip.destination} id="trip-img" />
           </div>
         </div>
       </div>
-
+      {/* members list section */}
       <div className="mt-4">
         <h3>Members List</h3>
+        {/* searchbar */}
         <div style={{ width: "300px" }}>
           <SearchBar onSearch={setSearchBar} />
         </div>
       </div>
-
+      {/* members list */}
       <ul className="list-group shadow-sm mt-3" id="customers-list">
         {filteredMembers.length > 0 ? (
           filteredMembers.map((member) => (
@@ -98,7 +86,7 @@ export default function TripMembersPage() {
           ))
         ) : (
           <li className="list-group-item text-muted fst-italic">
-            "{searchBar}" non c'è nella lista!
+            "{searchBar}" non è presente nella lista!
           </li>
         )}
       </ul>
@@ -118,33 +106,32 @@ export default function TripMembersPage() {
           >
             <div className="d-flex justify-content-between align-items-center mb-3">
               <h4 className="m-0">Dettaglio Passeggero</h4>
-              <button
-                className="btn-close"
-                onClick={() => setSelectedMember(null)}
-              ></button>
+              <button className="btn-close" onClick={() => setSelectedMember(null)}></button>
+            </div>
+            {/* member pop-up details */}
+            <div>
+              <strong>Nome: </strong>
+              <span>{selectedMember.first_name}</span>
+            </div>
+            <div>
+              <strong>Cognome: </strong>
+              <span>{selectedMember.last_name}</span>
+            </div>
+            <div>
+              <strong>Codice Fiscale: </strong>
+              <span>{selectedMember.tax_code}</span>
+            </div>
+            <div>
+              <strong>Telefono: </strong>
+              <span>{selectedMember.phone}</span>
+            </div>
+            <div>
+              <strong>E-mail: </strong>
+              <span>{selectedMember.email}</span>
             </div>
 
-            <p>
-              <strong>Nome:</strong> {selectedMember.first_name}
-            </p>
-            <p>
-              <strong>Cognome:</strong> {selectedMember.last_name}
-            </p>
-            <p>
-              <strong>Codice Fiscale:</strong> {selectedMember.tax_code}
-            </p>
-            <p>
-              <strong>Telefono:</strong> {selectedMember.phone}
-            </p>
-            <p>
-              <strong>E-mail:</strong> {selectedMember.email}
-            </p>
-
             <div className="text-end mt-3">
-              <button
-                className="btn btn-secondary"
-                onClick={() => setSelectedMember(null)}
-              >
+              <button className="btn btn-secondary" onClick={() => setSelectedMember(null)}>
                 Chiudi
               </button>
             </div>

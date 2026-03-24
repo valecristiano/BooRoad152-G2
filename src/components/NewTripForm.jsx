@@ -22,14 +22,12 @@ export default function NewTripForm({ trips, setTrips }) {
   // form submit
   const formSubmit = (e) => {
     e.preventDefault();
-
     // new id
     const getNextId = () => {
       if (trips.length === 0) return 1;
       const maxId = Math.max(...trips.map((trip) => trip.id));
       return maxId + 1;
     };
-
     // new object
     const newTrip = {
       id: getNextId(),
@@ -37,17 +35,17 @@ export default function NewTripForm({ trips, setTrips }) {
     };
 
     setTrips([...trips, newTrip]);
-
     setFormData(initialFormData);
   };
 
   return (
     <form onSubmit={formSubmit} className="bg-light rounded-3">
       <div className="card_header rounded-top-3 bg-dark text-white p-3">
-        <h2 className="mb-1">Leave a Review</h2>
+        <h2 className="mb-1">Aggiungi un Nuovo Viaggio</h2>
       </div>
       <div className="p-3">
-        <label className="form-label fs-4" htmlFor="new-destination">
+        {/* destination */}
+        <label className="form-label fs-4 ms-1 mb-0" htmlFor="new-destination">
           Nuova Destinazione
         </label>
         <input
@@ -60,7 +58,8 @@ export default function NewTripForm({ trips, setTrips }) {
           id="new-destination"
           required
         />
-        <label className="form-label fs-4 mt-2" htmlFor="new-start">
+        {/* start */}
+        <label className="form-label fs-4 mt-2 ms-1 mb-0" htmlFor="new-start">
           Data Inizio
         </label>
         <input
@@ -74,7 +73,8 @@ export default function NewTripForm({ trips, setTrips }) {
           placeholder="AAAA-MM-GG"
           required
         />
-        <label className="form-label fs-4 mt-2" htmlFor="new-end">
+        {/* end */}
+        <label className="form-label fs-4 mt-2 ms-1 mb-0" htmlFor="new-end">
           Data Fine
         </label>
         <input
@@ -88,8 +88,9 @@ export default function NewTripForm({ trips, setTrips }) {
           placeholder="AAAA-MM-GG"
           required
         />
-        <label className="form-label fs-4 mt-2" htmlFor="new-image">
-          Percorso Immagine
+        {/* image */}
+        <label className="form-label fs-4 mt-2 ms-1 mb-0" htmlFor="new-image">
+          Immagine
         </label>
         <input
           onChange={handleFormChange}
@@ -99,6 +100,7 @@ export default function NewTripForm({ trips, setTrips }) {
           className="form-control"
           type="text"
           id="new-image"
+          placeholder="Percorso Immagine"
           required
         />
       </div>
