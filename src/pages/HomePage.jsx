@@ -16,21 +16,23 @@ export default function HomePage() {
       <div className="row row-cols-1 gap-4">
         {trips.map((trip) => (
           <div key={trip.id} className="col">
+            {/* trip card */}
             <Link to={`/${trip.id}`}>
               <div className="card text-bg-dark trip-card">
                 <img
                   src={trip.image}
                   className="card-img object-fit-cover"
                   alt={trip.destination}
-                  style={{ height: "200px" }}
                 />
                 <div className="card-img-overlay overlay-dark d-flex align-items-center justify-content-between">
+                  {/* trip destination */}
                   <div className="d-flex">
                     <h2 className="card-title fw-bolder fst-italic">
                       {trip.destination}
                     </h2>
                   </div>
                   <div>
+                    {/* trip dates */}
                     <div className="card-text fst-italic fs-5">
                       <div className="fw-bolder">Partenza</div>
                       <div>{trip.start_date}</div>
@@ -46,6 +48,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+      {/* new trip form */}
       <section className="new-trip-section mt-5">
         <NewTripForm trips={trips} setTrips={setTrips} />
       </section>
