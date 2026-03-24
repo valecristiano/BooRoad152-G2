@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className="row row-cols-1 gap-4">
           {trips.map((trip) => {
             return (
-              <div className="col">
+              <div key={trip.id} className="col">
                 <Link to={`/${trip.id}`}>
                   <div className="card text-bg-dark trip-card">
                     <img
