@@ -14,6 +14,10 @@
 }
 
 .trip-card:hover {
-  transform: scale(1.04);
-  box-shadow: 6px 10px rgb(0, 0, 0, 0.5);
+  transform: scale(1.02);
+  box-shadow: 8px 10px rgb(0, 0, 0, 0.1);
+}
+
+main {
+  background: linear-gradient(to bottom, rgb(17, 17, 235), rgb(159, 159, 27));
 }

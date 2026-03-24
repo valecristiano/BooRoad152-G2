@@ -24,8 +24,18 @@ export default function HomePage() {
                         </h5>
                       </div>
                       <div>
-                        <p className="card-text fw-bolder">{trip.start_date}</p>
-                        <p className="card-text fw-bolder">{trip.end_date}</p>
+                        <p className="card-text">
+                          <span className="d-block fw-bolder">
+                            <em>Partenza</em>
+                          </span>
+                          {trip.start_date}
+                        </p>
+                        <p className="card-text ">
+                          <span className="d-block fw-bolder">
+                            <em>Ritorno</em>
+                          </span>
+                          {trip.end_date}
+                        </p>
                       </div>
                     </div>
                   </div>
