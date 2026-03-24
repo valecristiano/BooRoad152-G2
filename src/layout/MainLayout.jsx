@@ -7,7 +7,11 @@ export default function MainLayout() {
       <header className="sticky-top">
         <nav className="navbar navbar-expand-lg border-body bg-body-tertiary">
           <div className="container-fluid py-2 justify-content-center">
-            <NavLink to="/" className="text-decoration-none fw-bold" aria-current="page">
+            <NavLink
+              to="/"
+              className="navbar-brand text-decoration-none fw-bold"
+              aria-current="page"
+            >
               <h1 className="fw-bold">BooRoad</h1>
             </NavLink>
           </div>
