@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage";
 import TripDetailPage from "./pages/TripDetailPage";
-import MemberDetailPage from "./pages/MemberDetailPage";
 import MainLayout from "./layout/MainLayout";
 
 export default function App() {
