@@ -11,7 +11,6 @@ export default function App() {
         <Route Component={MainLayout}>
           <Route index Component={HomePage}></Route>
           <Route path="/:id" Component={TripDetailPage}></Route>
-          <Route path="/member/:id" Component={MemberDetailPage}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
