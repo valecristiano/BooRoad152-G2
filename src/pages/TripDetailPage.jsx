@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import trips from "../data/trips";
 import members from "../data/members";
 import SearchBar from "../components/SearchBar";
+import { useState } from "react";
 
 export default function TripMembersPage() {
   const { id } = useParams();
