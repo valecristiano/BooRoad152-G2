@@ -73,7 +73,6 @@ main {
 
 #customers-list {
   background: rgba(255, 255, 255, 0.5) !important;
-  backdrop-filter: blur(5px);
   border: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
@@ -81,7 +80,6 @@ main {
 
 #search-logo {
   background: rgba(255, 255, 255, 0.089) !important;
-  backdrop-filter: blur(5px);
   border: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
@@ -139,9 +137,12 @@ main {
 #new-start,
 #new-end,
 #new-image {
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.4);
   border: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
+}
+
+#exampleModalToggle {
+  backdrop-filter: blur(2px);
 }
