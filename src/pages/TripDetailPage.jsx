@@ -3,6 +3,7 @@ import { useState } from "react";
 import trips from "../data/trips";
 import members from "../data/members";
 import SearchBar from "../components/SearchBar";
+import "../assets/css/members-detail.css"
 
 export default function TripMembersPage() {
   const { id } = useParams();
@@ -28,7 +29,7 @@ export default function TripMembersPage() {
   return (
     <div className="container">
       <div className="row g-4">
-        {/* trip main infos */}
+
         <section className="col-4 d-flex align-items-center">
           <div className="card p-3 w-100 d-flex flex-column justify-content-around" id="trip-info">
             <h2 className="h1 mb-1 fw-bolder mb-2 fst-italic">{trip.destination}</h2>
@@ -42,22 +43,22 @@ export default function TripMembersPage() {
             </div>
           </div>
         </section>
-        {/* poster */}
+        
         <div className="col-8">
           <div className="poster-container">
             <img className="img-fluid" src={trip.image} alt={trip.destination} id="trip-img" />
           </div>
         </div>
       </div>
-      {/* members list section */}
+      
       <div className="mt-4">
         <h3>Members List</h3>
-        {/* searchbar */}
+       
         <div style={{ width: "300px" }}>
           <SearchBar onSearch={setSearchBar} />
         </div>
       </div>
-      {/* members list */}
+      
       <ul className="list-group shadow-sm mt-3" id="customers-list">
         {filteredMembers.length > 0 ? (
           filteredMembers.map((member) => (
@@ -91,53 +92,80 @@ export default function TripMembersPage() {
         )}
       </ul>
 
-      {selectedMember && (
-        <>
-          <div
-            className="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 popup-div"
-            style={{ zIndex: 1040 }}
-            onClick={() => setSelectedMember(null)}
-          ></div>
+     {selectedMember && (
+  <>
+  
+    <div
+      className="member-overlay-backdrop"
+      onClick={() => setSelectedMember(null)}
+    ></div>
 
-          <div
-            className="position-fixed top-50 start-50 translate-middle p-4 rounded shadow"
-            id="layover-info"
-            style={{ zIndex: 1050, minWidth: "320px", maxWidth: "90%" }}
-          >
-            <div className="d-flex justify-content-between align-items-center mb-3">
-              <h4 className="m-0">Dettaglio Passeggero</h4>
-              <button className="btn-close" onClick={() => setSelectedMember(null)}></button>
-            </div>
-            {/* member pop-up details */}
-            <div>
-              <strong>Nome: </strong>
-              <span>{selectedMember.first_name}</span>
-            </div>
-            <div>
-              <strong>Cognome: </strong>
-              <span>{selectedMember.last_name}</span>
-            </div>
-            <div>
-              <strong>Codice Fiscale: </strong>
-              <span>{selectedMember.tax_code}</span>
-            </div>
-            <div>
-              <strong>Telefono: </strong>
-              <span>{selectedMember.phone}</span>
-            </div>
-            <div>
-              <strong>E-mail: </strong>
-              <span>{selectedMember.email}</span>
-            </div>
+    <div className="member-overlay-wrapper">
+      <div className="member-overlay-card">
 
-            <div className="text-end mt-3">
-              <button className="btn btn-secondary" onClick={() => setSelectedMember(null)}>
-                Chiudi
-              </button>
+        <div className="member-overlay-header text-white p-3 d-flex justify-content-between align-items-start">
+          
+          <div className="d-flex align-items-center gap-3">
+
+            <img
+              src={selectedMember.avatar || "/img/members/memberM1.jpg"}
+              alt={`${selectedMember.first_name} ${selectedMember.last_name}`}
+              className="rounded-circle border border-3 border-white member-avatar-lg"
+            />
+
+            <div>
+              <div className="small opacity-75">
+                PASSENGER PROFILE
+              </div>
+
+              <h5 className="mb-1">
+                {selectedMember.first_name} {selectedMember.last_name}
+              </h5>
+
+              <div className="small opacity-75">
+                {selectedMember.email}
+              </div>
             </div>
           </div>
-        </>
-      )}
+
+          <button
+            className="btn-close btn-close-white"
+            onClick={() => setSelectedMember(null)}
+          ></button>
+        </div>
+
+        <div className="member-overlay-scroll p-3">
+
+          <div className="member-info-box p-3 mb-3 shadow-sm">
+            <div className="text-muted small">Nome</div>
+            <div className="fw-semibold">{selectedMember.first_name}</div>
+          </div>
+
+          <div className="member-info-box p-3 mb-3 shadow-sm">
+            <div className="text-muted small">Cognome</div>
+            <div className="fw-semibold">{selectedMember.last_name}</div>
+          </div>
+
+          <div className="member-info-box p-3 mb-3 shadow-sm">
+            <div className="text-muted small">Codice Fiscale</div>
+            <div className="fw-semibold">{selectedMember.tax_code}</div>
+          </div>
+
+          <div className="member-info-box p-3 mb-3 shadow-sm">
+            <div className="text-muted small">Telefono</div>
+            <div>{selectedMember.phone}</div>
+          </div>
+
+          <div className="member-info-box p-3 mb-2 shadow-sm">
+            <div className="text-muted small">Email</div>
+            <div>{selectedMember.email}</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </>
+)}
     </div>
   );
 }
