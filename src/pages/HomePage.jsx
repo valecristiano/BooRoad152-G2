@@ -16,13 +16,13 @@ export default function HomePage() {
                     alt={trip.destination}
                     style={{ height: "200px" }}
                   />
-                  <div className="card-img-overlay overlay-dark">
-                    <div className="d-flex justify-content-between align-items-center">
+                  <div className="card-img-overlay overlay-dark d-flex align-items-center justify-content-between">
+                    <div className="d-flex">
                       <h5 className="card-title">{trip.destination}</h5>
-                      <div>
-                        <p className="card-text">{trip.start_date}</p>
-                        <p className="card-text">{trip.end_date}</p>
-                      </div>
+                    </div>
+                    <div>
+                      <p className="card-text">{trip.start_date}</p>
+                      <p className="card-text">{trip.end_date}</p>
                     </div>
                   </div>
                 </div>
