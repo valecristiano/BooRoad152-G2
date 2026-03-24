@@ -20,7 +20,7 @@ export default function HomePage() {
                     <div className="card-img-overlay overlay-dark d-flex align-items-center justify-content-between">
                       <div className="d-flex">
                         <h5 className="card-title fs-2 fw-bolder">
-                          {trip.destination}
+                          <em> {trip.destination}</em>
                         </h5>
                       </div>
                       <div>
