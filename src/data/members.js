@@ -1,4 +1,4 @@
-export default [
+const members = [
   {
     id: 1,
     first_name: "Luca",
@@ -6,6 +6,7 @@ export default [
     tax_code: "RSSLCU90A01H501Z",
     email: "luca.rossi@example.com",
     phone: "+393401234567",
+    avatar: "/img/members/memberM1.jpg",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export default [
     tax_code: "BNCGLI92B41F205X",
     email: "giulia.bianchi@example.com",
     phone: "+393491234568",
+    avatar: "/img/members/memberF1.jpg",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export default [
     tax_code: "VRDMRC88C12G273Y",
     email: "marco.verdi@example.com",
     phone: "+393471234569",
+    avatar: "/img/members/memberM2.jpg",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export default [
     tax_code: "NRISRA95D55H501W",
     email: "sara.neri@example.com",
     phone: "+393481234570",
+    avatar: "/img/members/memberF2.jpg",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export default [
     tax_code: "CNTDVD89E20F839K",
     email: "davide.conti@example.com",
     phone: "+393451234571",
+    avatar: "/img/members/memberM3.jpg",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export default [
     tax_code: "RCCLNE93F61H224L",
     email: "elena.ricci@example.com",
     phone: "+393461234572",
+    avatar: "/img/members/memberF3.jpg",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export default [
     tax_code: "GLLFNC87G10D612M",
     email: "francesco.gallo@example.com",
     phone: "+393431234573",
+    avatar: "/img/members/memberM4.jpg",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export default [
     tax_code: "FRRCHR96H45L219N",
     email: "chiara.ferri@example.com",
     phone: "+393421234574",
+    avatar: "/img/members/memberF4.jpg",
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export default [
     tax_code: "RMNLSN91I30H501P",
     email: "alessandro.romano@example.com",
     phone: "+393411234575",
+    avatar: "/img/members/memberM5.jpg",
   },
   {
     id: 10,
@@ -78,5 +87,8 @@ export default [
     tax_code: "GRCMTN94L65F158Q",
     email: "martina.greco@example.com",
     phone: "+393401234576",
+    avatar: "/img/members/memberF5.jpg",
   },
 ];
+
+export default members;
