@@ -74,6 +74,7 @@ export default function TripMembersPage() {
         {filteredMembers.length > 0 ? (
           filteredMembers.map((member) => (
             <li
+              id="customer-list-item"
               key={member.id}
               className="list-group-item d-flex justify-content-between align-items-center"
               style={{ cursor: "pointer" }}
