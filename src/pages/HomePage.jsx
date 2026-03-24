@@ -8,6 +8,73 @@ export default function HomePage() {
 
   return (
     <div className="container">
+      <div className="d-flex justify-content-end">
+        <div
+          className="modal fade"
+          id="exampleModalToggle"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1"
+        >
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                <NewTripForm trips={trips} setTrips={setTrips} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="exampleModalToggle2"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel2"
+          tabindex="-1"
+        >
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModalToggleLabel2">
+                  Modal 2
+                </h1>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                Hide this modal and show the first with the button below.
+              </div>
+              <div className="modal-footer">
+                <button
+                  className="btn btn-primary"
+                  data-bs-target="#exampleModalToggle"
+                  data-bs-toggle="modal"
+                >
+                  Back to first
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          className="btn btn-primary"
+          data-bs-target="#exampleModalToggle"
+          data-bs-toggle="modal"
+        >
+          Aggiungi Viaggio
+        </button>
+      </div>
       <div className="d-flex justify-content-center my-3">
         <h2 className="text-center rounded-4 py-2 px-3 title text-white fw-bolder">
           Seleziona il Viaggio
@@ -49,9 +116,10 @@ export default function HomePage() {
         ))}
       </div>
       {/* new trip form */}
-      <section className="new-trip-section mt-5">
+
+      {/* <section className="new-trip-section mt-5">
         <NewTripForm trips={trips} setTrips={setTrips} />
-      </section>
+      </section> */}
     </div>
   );
 }
