@@ -117,3 +117,7 @@ main {
 .popup-div {
   backdrop-filter: blur(2px);
 }
+
+.card_header {
+  background-color: #1982f1;
+}

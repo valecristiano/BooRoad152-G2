@@ -40,7 +40,7 @@ export default function NewTripForm({ trips, setTrips }) {
 
   return (
     <form onSubmit={formSubmit} className="bg-light rounded-3">
-      <div className="card_header rounded-top-3 bg-dark text-white p-3">
+      <div className="card_header rounded-top-3 text-white p-3">
         <h2 className="mb-1">Aggiungi un Nuovo Viaggio</h2>
       </div>
       <div className="p-3">
@@ -105,7 +105,7 @@ export default function NewTripForm({ trips, setTrips }) {
         />
       </div>
       <div className="d-flex justify-content-end pe-4 pt-2 pb-3">
-        <button className="btn btn-success fs-5" type="submit">
+        <button className="btn btn-warning fs-5" type="submit">
           Aggiungi
         </button>
       </div>
