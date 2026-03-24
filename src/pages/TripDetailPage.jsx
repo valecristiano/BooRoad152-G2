@@ -57,6 +57,7 @@ export default function TripMembersPage() {
               className="img-fluid"
               src={trip.image}
               alt={trip.destination}
+              id="trip-img"
             />
           </div>
         </div>
@@ -69,7 +70,7 @@ export default function TripMembersPage() {
         </div>
       </div>
 
-      <ul className="list-group shadow-sm mt-3">
+      <ul className="list-group shadow-sm mt-3" id="customers-list">
         {filteredMembers.length > 0 ? (
           filteredMembers.map((member) => (
             <li
