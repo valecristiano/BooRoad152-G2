@@ -10,7 +10,7 @@ export default function HomePage() {
             return (
               <div className="col">
                 <Link to={`/${trip.id}`}>
-                  <div className="card text-bg-dark">
+                  <div className="card text-bg-dark trip-card">
                     <img
                       src={trip.image}
                       className="card-img object-fit-cover"
