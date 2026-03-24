@@ -112,7 +112,8 @@ export default function TripMembersPage() {
           ></div>
 
           <div
-            className="position-fixed top-50 start-50 translate-middle bg-white p-4 rounded shadow"
+            className="position-fixed top-50 start-50 translate-middle p-4 rounded shadow"
+            id="layover-info"
             style={{ zIndex: 1050, minWidth: "320px", maxWidth: "90%" }}
           >
             <div className="d-flex justify-content-between align-items-center mb-3">
