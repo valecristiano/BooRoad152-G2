@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+
 import trips from "../data/trips";
 import members from "../data/members";
 import SearchBar from "../components/SearchBar";
@@ -36,12 +38,20 @@ export default function TripMembersPage() {
         </div>
         <section className="col-12 members-list">
           <h3 className="ms-2">Members List</h3>
+          <div style={{ width: "300px" }}>
+            <SearchBar onSearch={setSearchBar} />
+          </div>
+
           <ul className="list-group">
-            {members.map((member) => (
-              <button key={member.id} className="btn text-start px-0 py-1">
-                <li className="list-group-item">{`• ${member.first_name} ${member.last_name} ${member.phone}`}</li>
-              </button>
-            ))}
+            {filteredMembers.length > 0 ? (
+              filteredMembers.map((member) => (
+                <button key={member.id} className="btn text-start px-0 py-1">
+                  <li className="list-group-item">{`• ${member.first_name} ${member.last_name} ${member.phone}`}</li>
+                </button>
+              ))
+            ) : (
+              <li className="list-group-item text-muted italic">Nessun partecipante trovato per "{searchBar}"</li>
+            )}
           </ul>
         </section>
       </div>
