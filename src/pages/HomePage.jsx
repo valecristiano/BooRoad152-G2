@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="container">
       <div className="d-flex justify-content-center my-3">
-        <h2 className="text-center rounded-4 py-2 px-3 title text-white">
+        <h2 className="text-center rounded-4 py-2 px-3 title text-white fw-bolder">
           Seleziona il Viaggio
         </h2>
       </div>
