@@ -1,8 +1,20 @@
+import { useState } from "react";
+
 import trips from "../data/trips";
 import members from "../data/members";
+import SearchBar from "../components/SearchBar";
 
 export default function TripMembersPage() {
   const exampleTrip = trips[0];
+
+  //stato lettura searchbar
+  const [searchBar, setSearchBar] = useState("");
+
+  //filtro rubrica
+  const filteredMembers = members.filter((member) => {
+    const fullName = `${member.first_name} ${member.last_name}`.toLowerCase();
+    return fullName.includes(searchBar.toLowerCase());
+  });
 
   return (
     <div className="container">
@@ -23,12 +35,34 @@ export default function TripMembersPage() {
         </div>
       </div>
 
-      <h3>Members List</h3>
+      {/* //inserisco il componente search bar */}
+      <div className="">
+        <h3>Members List</h3>
+        <div style={{ width: "300px" }}>
+          <SearchBar onSearch={setSearchBar} />
+        </div>
+      </div>
+
+      {/* map partecipanti con condition rendering in caso di nome non trovato */}
+      <ul className="list-group shadow-sm">
+        {filteredMembers.length > 0 ? (
+          filteredMembers.map((member) => (
+            <li key={member.id} className="list-group-item">
+              <i className="bi bi-person-circle me-2"></i>
+              {`${member.first_name} ${member.last_name}`}
+            </li>
+          ))
+        ) : (
+          <li className="list-group-item text-muted italic">"{searchBar}" non c'è nella lista!</li>
+        )}
+      </ul>
+
+      {/* <h3>Members List</h3>
       <ul>
         {members.map((member) => (
           <li key={member.id}>{`${member.first_name} ${member.last_name}`}</li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }

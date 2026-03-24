@@ -7,18 +7,11 @@ export default function MainLayout() {
         <div className="container-fluid mx-2 p-2 rounded">
           {/* home-page */}
           <NavLink to="/" className="navbar-brand" aria-current="page">
-            BooRoad
+            <img src="/bus-booroad.png" alt="bus-icon" width="50" />
+            <span className="brand-title ps-2">BooRoad</span>
           </NavLink>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <i className="bi bi-list custom-burger"></i>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarText">
