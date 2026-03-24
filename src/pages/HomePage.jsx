@@ -17,15 +17,13 @@ export default function HomePage() {
                     style={{ height: "200px" }}
                   />
                   <div className="card-img-overlay overlay-dark">
-                    <h5 className="card-title">{trip.destination}</h5>
-                    <p className="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p className="card-text">
-                      <small>Last updated 3 mins ago</small>
-                    </p>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <h5 className="card-title">{trip.destination}</h5>
+                      <div>
+                        <p className="card-text">{trip.start_date}</p>
+                        <p className="card-text">{trip.end_date}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
