@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <>
       <div className="container">
-        <div className="row row-cols-1 gap-3">
+        <div className="row row-cols-1 gap-4">
           {trips.map((trip) => {
             return (
               <div className="col">
