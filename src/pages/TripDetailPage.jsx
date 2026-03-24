@@ -29,16 +29,35 @@ export default function TripMembersPage() {
     <div className="container">
       <div className="row g-4">
         <section className="col-4 d-flex align-items-center">
-          <div className="card p-3 w-100 d-flex flex-column justify-content-around">
-            <h2 className="h1 mb-1">{trip.destination}</h2>
-            <div className="fs-5 mb-1">{`Starting: ${trip.start_date}`}</div>
-            <div className="fs-5 mb-1">{`Ending: ${trip.end_date}`}</div>
+          <div
+            className="card p-3 w-100 d-flex flex-column justify-content-around"
+            id="trip-info"
+          >
+            <h2 className="h1 mb-1 fw-bolder">
+              <em> {trip.destination}</em>
+            </h2>
+            <div className="fs-5 mb-1">
+              <em>
+                <span className="fw-semibold">Starting: </span>
+                {`${trip.start_date}`}
+              </em>
+            </div>
+            <div className="fs-5 mb-1">
+              <em>
+                <span className="fw-semibold">Ending: </span>
+                {`${trip.end_date}`}
+              </em>
+            </div>
           </div>
         </section>
 
         <div className="col-8">
           <div className="poster-container">
-            <img className="img-fluid" src={trip.image} alt={trip.destination} />
+            <img
+              className="img-fluid"
+              src={trip.image}
+              alt={trip.destination}
+            />
           </div>
         </div>
       </div>
@@ -102,11 +121,21 @@ export default function TripMembersPage() {
               ></button>
             </div>
 
-            <p><strong>Nome:</strong> {selectedMember.first_name}</p>
-            <p><strong>Cognome:</strong> {selectedMember.last_name}</p>
-            <p><strong>Codice Fiscale:</strong> {selectedMember.tax_code}</p>
-            <p><strong>Telefono:</strong> {selectedMember.phone}</p>
-            <p><strong>E-mail:</strong> {selectedMember.email}</p>
+            <p>
+              <strong>Nome:</strong> {selectedMember.first_name}
+            </p>
+            <p>
+              <strong>Cognome:</strong> {selectedMember.last_name}
+            </p>
+            <p>
+              <strong>Codice Fiscale:</strong> {selectedMember.tax_code}
+            </p>
+            <p>
+              <strong>Telefono:</strong> {selectedMember.phone}
+            </p>
+            <p>
+              <strong>E-mail:</strong> {selectedMember.email}
+            </p>
 
             <div className="text-end mt-3">
               <button
