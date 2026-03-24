@@ -91,3 +91,7 @@ main {
 #customer-list-item:hover {
   background: rgba(108, 108, 108, 0.25);
 }
+
+.popup-div {
+  backdrop-filter: blur(2px);
+}

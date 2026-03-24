@@ -106,7 +106,7 @@ export default function TripMembersPage() {
       {selectedMember && (
         <>
           <div
-            className="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"
+            className="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 popup-div"
             style={{ zIndex: 1040 }}
             onClick={() => setSelectedMember(null)}
           ></div>
