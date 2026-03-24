@@ -1,11 +1,21 @@
 import { useParams } from "react-router-dom";
 import trips from "../data/trips";
 import members from "../data/members";
+import SearchBar from "../components/SearchBar";
 
 export default function TripMembersPage() {
   const { id } = useParams();
 
   const trip = trips.find((trip) => trip.id === parseInt(id, 10));
+
+  //stato lettura searchbar
+  const [searchBar, setSearchBar] = useState("");
+
+  //filtro rubrica
+  const filteredMembers = members.filter((member) => {
+    const fullName = `${member.first_name} ${member.last_name}`.toLowerCase();
+    return fullName.includes(searchBar.toLowerCase());
+  });
 
   return (
     <div className="container">

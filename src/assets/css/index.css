@@ -4,3 +4,29 @@
 .nav-link {
   color: #fecc01;
 }
+
+.navbar-toggler {
+  border-color: #4086d0;
+}
+
+.custom-burger {
+  font-size: 1.5rem;
+  color: #4086d0;
+}
+
+.overlay-dark {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.trip-card {
+  transition: 0.4s all ease;
+}
+
+.trip-card:hover {
+  transform: scale(1.02);
+  box-shadow: 8px 10px rgb(0, 0, 0, 0.1);
+}
+
+main {
+  background: linear-gradient(to bottom, rgb(17, 17, 235), rgb(159, 159, 27));
+}
