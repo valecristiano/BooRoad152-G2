@@ -1,12 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import trips from "../data/trips";
 import members from "../data/members";
 import SearchBar from "../components/SearchBar";
 import MemberCard from "../components/MemberCard";
 import "../assets/css/members-detail.css";
 
-export default function TripMembersPage() {
+export default function TripMembersPage({ trips }) {
   const { id } = useParams();
 
   const trip = trips.find((trip) => trip.id === parseInt(id, 10));
