@@ -4,8 +4,8 @@ import { useState } from "react";
 import trips from "../data/trips";
 import members from "../data/members";
 import SearchBar from "../components/SearchBar";
-import "../assets/css/members-detail.css";
 import MemberCard from "../components/MemberCard";
+import "../assets/css/members-detail.css";
 
 export default function TripMembersPage() {
   const { id } = useParams();
@@ -22,16 +22,16 @@ export default function TripMembersPage() {
 
   if (!trip) {
     return (
-      <div className="container mt-4">
+      <div className="container py-5">
         <h2>Viaggio non trovato</h2>
       </div>
     );
   }
 
   return (
-    <div className="container">
+    <div className="container py-4">
       <div className="row g-4">
-        <section className="col-4 d-flex align-items-center">
+        <section className="col-12 col-sm-4 d-flex align-items-center">
           <div className="card p-3 w-100 d-flex flex-column justify-content-around" id="trip-info">
             <h2 className="h1 mb-1 fw-bolder mb-2 fst-italic">{trip.destination}</h2>
             <div className="fs-5 mb-1 fst-italic">
@@ -45,7 +45,7 @@ export default function TripMembersPage() {
           </div>
         </section>
 
-        <div className="col-8">
+        <div className="col-12 col-sm-8">
           <div className="poster-container">
             <img className="img-fluid" src={trip.image} alt={trip.destination} id="trip-img" />
           </div>

@@ -1,6 +1,7 @@
 .navbar-brand {
   color: #4086d0;
 }
+
 .nav-link {
   color: #fecc01;
 }
@@ -24,7 +25,7 @@
 }
 
 .trip-card {
-  transition: 0.4s all ease;
+  transition: all 0.2s ease;
 }
 
 .trip-card > img {
@@ -37,8 +38,27 @@
   box-shadow: 8px 10px rgb(0, 0, 0, 0.1);
 }
 
+.trip-form-btn .btn {
+  height: 250px;
+  width: 35%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border: 5px solid rgb(255, 255, 255, 0.7);
+  transition: width 0.3s ease;
+}
+
+.trip-form-btn .btn:hover {
+  width: 100%;
+}
+
+.form-body {
+  border: 1px solid rgb(255, 255, 255, 0.4);
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+}
+
 main {
-  background-image: url("../../../public/img/sydney.jpg");
+  background-image: url("/img/sydney.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -73,7 +93,6 @@ main {
 
 #customers-list {
   background: rgba(255, 255, 255, 0.5) !important;
-  backdrop-filter: blur(5px);
   border: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
@@ -81,7 +100,6 @@ main {
 
 #search-logo {
   background: rgba(255, 255, 255, 0.089) !important;
-  backdrop-filter: blur(5px);
   border: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
@@ -120,4 +138,52 @@ main {
 
 .card_header {
   background-color: #1982f1;
+  border-bottom: none;
+}
+
+.form-add {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+.modal-content > .modal-header {
+  border-bottom: none;
+}
+
+#new-destination,
+#new-start,
+#new-end,
+#new-image {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+#exampleModalToggle {
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 576px) {
+  .trip-form-btn .btn {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .trip-form-btn .btn {
+    height: 100%;
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .trip-form-btn .btn {
+    height: 100%;
+    width: 40%;
+  }
 }
