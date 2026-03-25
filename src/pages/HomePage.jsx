@@ -24,7 +24,6 @@ export default function HomePage() {
                   src={trip.image}
                   className="card-img object-fit-cover"
                   alt={trip.destination}
-                  // loading="lazy"
                 />
                 <div className="card-img-overlay overlay-dark d-flex align-items-center justify-content-between">
                   {/* trip destination */}
