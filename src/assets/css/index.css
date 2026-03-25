@@ -1,5 +1,6 @@
 .navbar-brand {
   color: #4086d0;
+  margin-right: 0;
 }
 
 .nav-link {
@@ -55,6 +56,7 @@
   border: 1px solid rgb(255, 255, 255, 0.4);
   border-top: 0;
   border-radius: 0 0 10px 10px;
+  border: none;
 }
 
 main {
@@ -137,8 +139,16 @@ main {
 }
 
 .card_header {
-  background-color: #1982f1;
+  /* background-color: #1982f1; */
   border-bottom: none;
+  background: linear-gradient(to bottom right, rgb(4, 92, 255), rgb(239, 209, 12));
+}
+
+.trip-add {
+  background: linear-gradient(to bottom right, rgb(239, 209, 12), rgb(4, 92, 255));
+  color: white;
+  border: none;
+  margin-top: 15px;
 }
 
 .form-add {

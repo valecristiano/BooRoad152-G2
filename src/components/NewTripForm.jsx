@@ -105,7 +105,7 @@ export default function NewTripForm({ trips, setTrips }) {
         />
       </div>
       <div className="d-flex justify-content-end pe-4 pt-2 pb-3">
-        <button className="btn btn-warning fs-5" type="submit">
+        <button className="btn btn-warning fs-5 trip-add" type="submit">
           Aggiungi
         </button>
       </div>
