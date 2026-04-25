@@ -1,16 +1,22 @@
-# React + Vite
+ <h2>✈️ Booroad - Gestione Tour Operator</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>
+<strong>Progetto di gruppo - Full-stack Web Development Master by Boolean Tech Academy </strong>
+</p>
+<p>
+Booroad è un prototipo di interfaccia creato con React per aiutare i tour operator a organizzare i viaggi e i relativi partecipanti. È uno strumento pensato per chi coordina gruppi e ha bisogno di avere dati logistici e contatti sempre a portata di mano in modo rapido e intuitivo.
+</p>
 
-Currently, two official plugins are available:
+<h3>🛠 Funzionalità:</h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Elenco Viaggi**: Visualizzazione in homepage dei tour attualmente attivi, completi di destinazione e date (inizio/fine).
+- **Rubrica Partecipanti**: Ogni viaggio dispone di una lista dedicata. È possibile filtrare i partecipanti per nome o cognome tramite una barra di ricerca istantanea.
+- **Dettagli Privati**: Cliccando sul nome di un partecipante, vengono mostrati i dati sensibili (Email, Telefono e Codice Fiscale).
+- **Inserimento Dati**: Funzionalità per aggiungere nuovi viaggi al sistema.
 
-## React Compiler
+🚀 **Tech Stack:**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- React Hooks
+- JavaScript (ES6)
+- CSS/Boostrap
