@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
-import initialTrips from "../data/trips";
 import NewTripForm from "../components/NewTripForm";
-import { useState } from "react";
 
-export default function HomePage() {
-  const [trips, setTrips] = useState(initialTrips);
-
+export default function HomePage({ trips, setTrips }) {
   return (
     <div className="container pt-1 pb-5">
       {/* trips */}
